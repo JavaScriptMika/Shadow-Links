@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShadowLinks</title>
+  <style>
+    body {
+      background-image: url('/Background/ShadowLinksBackground.png');
+      background-size: cover;
+      margin: 0;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    h1 {
+      color: grey;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 20px;
+    }
+
+    .GoogleSearch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0d0d0d;
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 8px 12px;
+      width: 250px;
+      margin: 0 auto;
+    }
+
+    .GoogleSearch input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .GoogleSearch button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .GoogleSearch button img {
+      width: 16px;
+      height: 16px;
+      filter: invert(1);
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .games a {
+      display: block;
+      transition: transform 0.2s ease;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .games a:hover {
+      transform: scale(1.05);
+    }
+
+    .games img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ShadowLinks</h1>
+    <form onsubmit="googleSearch(event)" class="GoogleSearch">
+      <input type="text" name="q" placeholder="URL Or Search" required>
+      <button type="submit">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149852.png" alt="Search">
+      </button>
+    </form>
+  </header>
+
+  <div class="games">
+    <a href="/Iframes/1v1.html"><img src="/Images/1v1.lol.webp" alt="1v1.lol"></a>
+    <a href="/Iframes/SubwaySurfers.html"><img src="/Images/SubwaySurfers.webp" alt="Subway Surfers"></a>
+    <a href="/Iframes/SuperMario64.html"><img src="/Images/SuperMario64 (1).webp" alt="Super Mario 64"></a>
+    <a href="/Iframes/CrazyCattle3D.html"><img src="/Images/crazy-cattle-3d-game.webp" alt="Crazy Cattle 3D"></a>
+    <a href="/Iframes/Minecraft.html"><img src="/Images/Minecraft.webp" alt="Minecraft"></a>
+    <a href="/Iframes/LoveBalls.html"><img src="/Images/Love-Balls.webp" alt="Love Balls"></a>
+    <a href="/Iframes/StickmanHook.html"><img src="/Images/StickmanHook.webp" alt="Stickman Hook"></a>
+    <a href="/Iframes/Deadshot.html"><img src="/Images/Deadshot.webp" alt="Deadshot"></a>
+    <a href="/Iframes/SoccerRandom.html"><img src="/Images/SoccerRandom.webp" alt="Soccer Random"></a>
+    <a href="/Iframes/RocketSoccerDurby.html"><img src="/Images/RocketDerbySoccer.webp" alt="Rocket Soccer Derby"></a>
+    <a href="/Iframes/SmashKarts.html"><img src="/Images/smashkarts.webp" alt="SmashKarts"></a>
+    <a href="/Iframes/HappyGlass.html"><img src="/Images/Happy-Glass.webp" alt="Happy Glass"></a>
+    <a href="/Iframes/DrawNSaveStickman.html"><img src="/Images/SaveStickman.webp" alt="Draw and Save Stickman"></a>
+    <a href="/Iframes/Findme.html"><img src="/Images/find-me-game.webp" alt="Find Me"></a>
+    <a href="/Iframes/XTrenchRun.html"><img src="/Images/XTrenchrun.webp" alt="X Trench Run"></a>
+    <a href="/Iframes/DriveMad.html"><img src="/Images/DriveMad.webp" alt="Drive Mad"></a>
+    <a href="/Iframes/ImpossibleQuiz.html"><img src="/Images/TheImpossibleQuiz.webp" alt="The Impossible Quiz"></a>
+    <a href="/Iframes/BlockBlast.html"><img src="/Images/BlockBlast.webp" alt="Block Blast"></a>
+    <a href="/Iframes/CatchTheCandy.html"><img src="/Images/Catch The Candy.webp" alt="Catch The Candy"></a>
+    <a href="/Iframes/Redball.html"><img src="/Images/red-ball.webp" alt="Red Ball"></a>
+    <a href="/Iframes/CookieClicker.html"><img src="/Images/Cookie Clicker.webp" alt="Cookie Clicker"></a>
+    <a href="/Iframes/TempleRun.html"><img src="/Images/TempleRun.webp" alt="Temple Run"></a>
+    <a href="/Iframes/BaldisBasic.html"><img src="/Images/BaldiBasic.webp" alt="Baldi's Basics"></a>
+    <a href="/Iframes/Paperio2.html"><img src="/Images/paper-io-2.webp" alt="Paper io 2"></a>
+    <a href="/Iframes/Slope.html"><img src="/Images/Slope.webp" alt="Slope"></a>
+    <a href="/Iframes/Geoguessr.html"><img src="/Images/Geoguessr.webp" alt="Geoguessr"></a>
+    <a href="/Iframes/CrossyRoads.html"><img src="/Images/CrossyRoads.webp" alt="Crossy Roads"></a>
+    <a href="/Iframes/AmongUs.html"><img src="/Images/Amongus.webp" alt="Among Us"></a>
+  </div>
+
+<script async src="https://cse.google.com/cse.js?cx=00efbf959618149a9"></script>
+  <div class="gcse-searchresults-only"></div>
+
+  <script>
+    function searchInIframe(event) {
+      event.preventDefault();
+      const query = document.getElementById("searchInput").value;
+      const input = document.querySelector('input.gsc-input');
+      const searchButton = document.querySelector('button.gsc-search-button');
+
+      if (input && searchButton) {
+        input.value = query;
+        searchButton.click();
+      }
+    }
+  </script>
+
+</body>
+</html>
